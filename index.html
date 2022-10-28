@@ -13,15 +13,33 @@
                 font-family: system-ui;
                 color-scheme: dark light;
                 margin: 2rem;
+
+                background: #05050D;
+                color: #F2F2DA;
+                accent-color: #F20C32;
+                caret-color: #F20C32;
+            }   
+
+            ::selection
+            {
+                background: #F20C32;
             }
-            
+
+            a:any-link {
+                color: #F20C32;
+            }
+
+            a:active {
+                color: #F2F2DA;
+            }
+
             body, h1
             {
                 margin: 0;
             }
 
             footer {
-                font-size: 50%;
+                font-size: 0.5rem;
                 position: fixed;
                 bottom: 0;
                 left: 2rem;
