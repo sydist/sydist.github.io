@@ -7,6 +7,14 @@
   "main": "index.js",
   "name": "sydist.github.io",
   "repository": "<https://github.com/sydist/sydist.github.io>",
-  "scripts": {},
-  "version": "0.0.0"
+  "scripts": 
+  {
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "version": "0.0.0",
+  "devDependencies": {
+    "astro": "^1.6.11"
+  }
 }
