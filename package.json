@@ -11,10 +11,14 @@
   {
     "start": "astro dev",
     "build": "astro build",
+    "minify": "html-minifier-terser --collapse-boolean-attributes --collapse-whitespace --decode-entities --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --use-short-doctype --minify-css --input-dir dist --output-dir dist --file-ext html",
+    "build:production": "npm run build && npm run minify",
     "preview": "astro preview"
   },
   "version": "0.0.0",
-  "devDependencies": {
-    "astro": "^1.6.11"
+  "devDependencies": 
+  {
+    "astro": "^1.6.11",
+    "html-minifier-terser": "^7.1.0"
   }
 }
