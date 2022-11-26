@@ -15,7 +15,7 @@
 		"build:production": "npm run build && npm run minify",
 		"preview": "astro preview"
 	},
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"devDependencies": 
 	{
 		"astro": "^1.6.11",

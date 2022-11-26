@@ -1,0 +1,71 @@
+---
+const path = Astro.url.pathname;
+---
+
+<nav class="wrapper">
+    <ul>
+        <li class="visually-hidden">
+            <a href="#content-skipped-to">SKIP TO CONTENT</a>
+        </li>
+        <li>
+            <a href="/" class:list={[{ current: path === "/" }]}>HOME</a>
+        </li>
+        <li>
+            <a href="/about" class:list={[{ current: path.startsWith("/about") }]}>ABOUT</a>
+        </li>
+        <li>
+            <a href="/blog" class:list={[{ current: path.startsWith("/blog") }]}>BLOG</a>
+        </li>
+        <li>
+            <a href="/contact" class:list={[{ current: path.startsWith("/contact") }]}>CONTACT</a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    a
+    {
+        color: inherit;
+        text-decoration: none;
+        text-underline-offset: 2px;
+    }
+
+    .visually-hidden
+    {
+        text-decoration: 2px underline;
+        order: 4;
+        width: max-content;
+    }
+
+    .current
+    {
+        color: var(--clr-primary);
+        text-decoration: 2px underline;
+        font-weight: var(--fw-bold);
+    }
+
+    ul
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 2rem 6rem;
+    }
+
+
+    @media (min-width: 1040px)
+    {
+        ul
+        {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: var(--step-5);
+        }
+
+        .visually-hidden
+        {
+            margin-left: auto;
+        }
+    }
+</style>
